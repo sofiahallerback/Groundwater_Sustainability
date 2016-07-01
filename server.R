@@ -13,12 +13,12 @@ root.dir <- "./"
 # 2.1  Input data
 # Year 1, Precip 2, Obsdata GWL 3
 
-Data_1981_2013 <- read.delim(paste0(root.dir,"~/Desktop/GWproject/Data/Data_1981_2013.txt"), header=FALSE)
+Data_1981_2013 <- read.delim(paste0(root.dir,"Data_1981_2013.txt"), header=FALSE)
 # Modeled GWL
-GW_level_1981_2013 <- read.csv(paste0(root.dir,"~/Desktop/GWproject/Data/GW_level_1981_2013.csv"), sep="")
+GW_level_1981_2013 <- read.csv(paste0(root.dir,"GW_level_1981_2013.csv"), sep="")
 # Year 1, Future Precip 6
 #futurePP <- read.table("~/Desktop/GWproject/Data/futurePP.txt", quote="\"", comment.char="")
-CAPP_2011_2099 <- read.delim(paste0(root.dir, "~/Desktop/GWproject/Data/CAPP_2011_2099.txt"), header=FALSE)
+CAPP_2011_2099 <- read.delim(paste0(root.dir, "CAPP_2011_2099.txt"), header=FALSE)
 #futurePPdf <- data.frame(years = futurePP[,1], precip = futurePP[,6])
 # Supply Demand realtionship past, 1981-2014
 #SupplyDemand_past <- read.csv("~/Desktop/GWproject/Data/SupplyDemand_past.csv")
