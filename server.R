@@ -8,20 +8,15 @@ library(reshape2)
 library(animation)
 library(devtools)
 
-#root.dir <- "./"
+root.dir <- "./"
 
 # 2.1  Input data
 # Year 1, Precip 2, Obsdata GWL 3
-
-Data_1981_2013 <- read.delim("Data_1981_2013.txt", header=FALSE) #paste0(root.dir,
-# Modeled GWL
-GW_level_1981_2013 <- read.csv("GW_level_1981_2013.csv", sep="") #paste0(root.dir,
-# Year 1, Future Precip 6
-#futurePP <- read.table("~/Desktop/GWproject/Data/futurePP.txt", quote="\"", comment.char="")
-CAPP_2011_2099 <- read.delim("CAPP_2011_2099.txt", header=FALSE) #paste0(root.dir, 
-#futurePPdf <- data.frame(years = futurePP[,1], precip = futurePP[,6])
-# Supply Demand realtionship past, 1981-2014
-#SupplyDemand_past <- read.csv("~/Desktop/GWproject/Data/SupplyDemand_past.csv")
+Data_1981_2013 <- read.delim(paste0(root.dir,"Data_1981_2013.txt"), header=FALSE) 
+# Calibrated period output form GW model
+GW_level_1981_2013 <- read.csv(paste0(root.dir,"GW_level_1981_2013.csv"), sep="") 
+# Future precipitation data 2011-2099
+CAPP_2011_2099 <- read.delim(paste0(root.dir, "CAPP_2011_2099.txt"), header=FALSE) 
 
 
 # 2.2 Create commun data frame
@@ -53,8 +48,6 @@ shinyServer(function(input, output) {
   # 3.1 Groundwater level plot
   output$number1.plot <- renderPlot({
     
-    # Change the plotted time period
-    #time_start <- input$time[1]
     time_end <- input$time # [2]
     # Change the simulated time period
     sim_start = 2013
