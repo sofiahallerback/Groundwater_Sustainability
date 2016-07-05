@@ -11,16 +11,16 @@ root.dir <- "./"
 
 # 2.1  Input data
 # Year 1, Precip 2, Obsdata GWL 3
-Data_1981_2013 <- read.delim(paste0(root.dir,"Data_1981_2013.txt")) 
+Data_1981_2013 <- read.delim(paste0(root.dir,"Data_1981_2013.txt"), header=FALSE) 
 # Calibrated period output form GW model
-GW_level_1981_2013 <- read.csv(paste0(root.dir,"GW_level_1981_2013.csv")) 
+GW_level_1981_2013 <- read.delim(paste0(root.dir,"GW_level_1981_2013.txt")) 
 # Future precipitation data 2011-2099
-CAPP_2011_2099 <- read.delim(paste0(root.dir, "CAPP_2011_2099.txt")) 
+CAPP_2011_2099 <- read.delim(paste0(root.dir, "CAPP_2011_2099.txt"), header=FALSE) 
 
 
 # 2.2 Create commun data frame
 dataframe <- data.frame(year = c(Data_1981_2013$V1,2014:2099), # futurePP[15:50,1]), 
-                        precip = c(Data_1981_2013$V2, CAPP_2011_2099[4:89,1]), #futurePP[15:50,6]), 
+                        precip = c(Data_1981_2013$V2, CAPP_2011_2099$V1[4:89]), #futurePP[15:50,6]), 
                         GWL_model = c(GW_level_1981_2013$x, rep(NA,86)),
                         GWL_model_senario1 = c(rep(NA,119)),
                         GWL_model_senario2 = c(rep(NA,119)),
