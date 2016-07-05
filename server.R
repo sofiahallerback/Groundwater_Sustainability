@@ -5,7 +5,7 @@ library(shiny)
 library(ggplot2)
 library(dplyr)
 library(reshape2)
-library(animation)
+#library(animation)
 library(devtools)
 
 root.dir <- "./"
