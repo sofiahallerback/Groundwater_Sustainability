@@ -1,8 +1,8 @@
 
 library(shiny)
-#library(shinythemes)
+library(shinythemes)
 
-shinyUI(fluidPage( #theme = shinytheme("cerulean"),
+shinyUI(fluidPage( theme = shinytheme("cerulean"),
                   h3("Groundwater Sustainablity in the Central Valley"),
                   
                   fluidRow(
