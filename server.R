@@ -8,7 +8,8 @@ library(reshape2)
 #library(animation)
 library(devtools)
 
-root.dir <- "./"
+#root.dir <- "./"
+root.dir <- ""
 
 # 2.1  Input data
 # Year 1, Precip 2, Obsdata GWL 3
