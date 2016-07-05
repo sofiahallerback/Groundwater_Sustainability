@@ -13,11 +13,11 @@ root.dir <- "./"
 
 # 2.1  Input data
 # Year 1, Precip 2, Obsdata GWL 3
-Data_1981_2013 <- read.delim(paste0(root.dir,"Data_1981_2013.txt"), header=FALSE) 
+Data_1981_2013 <- read.delim(paste0(root.dir,"Data_1981_2013.txt")) 
 # Calibrated period output form GW model
-GW_level_1981_2013 <- read.csv(paste0(root.dir,"GW_level_1981_2013.csv"), sep="") 
+GW_level_1981_2013 <- read.csv(paste0(root.dir,"GW_level_1981_2013.csv")) 
 # Future precipitation data 2011-2099
-CAPP_2011_2099 <- read.delim(paste0(root.dir, "CAPP_2011_2099.txt"), header=FALSE) 
+CAPP_2011_2099 <- read.delim(paste0(root.dir, "CAPP_2011_2099.txt")) 
 
 
 # 2.2 Create commun data frame
