@@ -21,10 +21,6 @@ library(shiny)
 library(ggplot2)
 library(dplyr)
 library(reshape2)
-#library(shiny)
-#library(ggplot2)
-#library(dplyr)
-#library(reshape2)
 #library(animation)
 #library(devtools)
 
@@ -53,7 +49,7 @@ CAPP_2011_2099 <- read.delim(paste0(root.dir, "CAPP_2011_2099.txt"), header=FALS
 gwRR = 3.5 # groundwater recharge rate
 
 dataframe <- data.frame(year = c(Data_1981_2013$V1,2014:2099), # futurePP[15:50,1]), 
-                        precip = c(Data_1981_2013$V2, CAPP_2011_2099$V1[4:89]), #futurePP[15:50,6]), 
+                        precip = c(Data_1981_2013$V2, CAPP_2011_2099$V1[4:89,1]), #futurePP[15:50,6]), 
                         GWL_model = c(GW_level_1981_2013$x, rep(NA,86)),
                         GWL_model_senario1 = c(rep(NA,119)),
                         GWL_model_senario2 = c(rep(NA,119)),
