@@ -9,9 +9,6 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Shiny app designed by Sofia Hallerbäck and Elias Massoud
 
-root.dir <- "./"
-#root.dir <- ""
-
 # START SERVER
 ####################################################################################################
 # 0.  Load Packages
@@ -27,6 +24,10 @@ library(reshape2)
 ####################################################################################################
 # 1.  Input data
 ####################################################################################################
+
+root.dir <- "./"
+#root.dir <- ""
+
 # Year 1, Precip 2, Obsdata GWL 3
 Data_1981_2013 <- read.delim(paste0(root.dir,"Data_1981_2013.txt"), header=FALSE) 
 # Calibrated period output form GW model
